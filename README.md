@@ -10,11 +10,13 @@ This is a private repository for Smart City project in the State University of T
 ```
 * Activate the environment with:
  
-    For Bash Users:
- ```
+For Bash Users:
+```
     source venv/bin/activate
 ```
-    For Fish Users
+
+For Fish Users
+
  ```
     source venv/bin/activate.fish
  ```
