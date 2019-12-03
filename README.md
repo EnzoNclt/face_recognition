@@ -1,4 +1,4 @@
-# image_recognition
+# face_recognition
 This is a private repository for Smart City project in the State University of Telecoms of Saint-Petersburg. For more information, see the target.md file
 
 ## Installation
@@ -18,4 +18,3 @@ This is a private repository for Smart City project in the State University of T
  ```
     source venv/bin/activate.fish
  ```
- 

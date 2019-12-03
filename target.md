@@ -10,8 +10,8 @@ Rasp capable of human recognition (genre/age) to use it for advertising
 * gtreamer
 
 ## Part:
-* Reconnaissance faciale
-* Communication Pi / Serveur
+* Face recognition
+* Communication Rasp/Server side
 
 ## References
 * [Face Recognition with python and opencv](https://www.pyimagesearch.com/2018/02/26/face-detection-with-opencv-and-deep-learning/)
