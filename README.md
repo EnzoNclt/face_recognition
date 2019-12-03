@@ -20,3 +20,9 @@ For Fish Users
  ```
     source venv/bin/activate.fish
  ```
+
+## Collaborators
+* Julien Aldon
+* Julie Wurtz
+* Valetin Collomb
+* Enzo Nicoletti
