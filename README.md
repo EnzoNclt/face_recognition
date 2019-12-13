@@ -15,8 +15,7 @@ For Bash Users:
     source venv/bin/activate
 ```
 
-For Fish Users
-
+For Fish Users:
  ```
     source venv/bin/activate.fish
  ```
@@ -26,5 +25,3 @@ For Fish Users
 * Julie Wurtz
 * Valetin Collomb
 * Enzo Nicoletti
-
-## Tests coucou c Julie
