@@ -22,11 +22,20 @@ For Fish Users:
 
 ## Usage
 
-To use the video_recognition script, use the following command:
+To detect on a camera the age and gender of one or several persons, you will need to use the detect_faces_video script, use the following command:
 ```
-python detect_faces_video.py --prototxt deploy.prototxt.txt --model res10_300x300_ssd_iter_140000.caffemodel
+python detect_faces_video.py [--confidence conf(default=0.5)]
 ```
 
+The face recognition is also availible on a single picture, using this command:
+```
+python detect_faces.py --image path_to_image
+```
+
+You can also try the gender age detection on a single image with the script gad using the following script
+```
+python gad.py --image path_to_image
+```
 
 ## Collaborators
 * Julien Aldon

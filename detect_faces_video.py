@@ -30,10 +30,6 @@ def highlightFace(net, frame, conf_threshold=0.7):
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-p", "--prototxt", required=True,
-	help="path to Caffe 'deploy' prototxt file")
-ap.add_argument("-m", "--model", required=True,
-	help="path to Caffe pre-trained model")
 ap.add_argument("-c", "--confidence", type=float, default=0.5,
 	help="minimum probability to filter weak detections")
 args = vars(ap.parse_args())
@@ -58,7 +54,7 @@ padding=20
 
 # load our serialized model from disk
 print("[INFO] loading model...")
-net = cv2.dnn.readNetFromCaffe(args["prototxt"], args["model"])
+net = cv2.dnn.readNetFromCaffe("dist/models/deploy.prototxt.txt", "dist/models/res10_300x300_ssd_iter_140000.caffemodel")
 
 # initialize the video stream and allow the cammera sensor to warmup
 print("[INFO] starting video stream...")
@@ -124,8 +120,6 @@ while True:
 					y = startY - 10 if startY - 10 > 10 else startY + 10
 					cv2.rectangle(frame, (startX, startY), (endX, endY),
 						(0, 0, 255), 2)
-					# cv2.putText(frame, text, (startX, y),
-					# 	cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
 					cv2.putText(frame, text, (faceBox[0], faceBox[1]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,255,255), 2, cv2.LINE_AA)
 				saved_conf = confidence
 		else:
