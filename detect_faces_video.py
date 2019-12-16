@@ -5,6 +5,7 @@ import argparse
 import imutils
 import time
 import cv2
+import os.path
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -47,7 +48,6 @@ while True:
 		# extract the confidence (i.e., probability) associated with the
 		# prediction
 		confidence = detections[0, 0, i, 2]
-
 		# filter out weak detections by ensuring the `confidence` is
 		# greater than the minimum confidence
 		if confidence < args["confidence"]:
@@ -58,6 +58,12 @@ while True:
 		box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
 		(startX, startY, endX, endY) = box.astype("int")
  
+		if confidence >= 0.9995:
+			if os.path.isfile('tmp.png'):
+				continue
+			else:
+				cv2.imwrite("tmp.png", frame)
+				saved_conf = confidence
 		# draw the bounding box of the face along with the associated
 		# probability
 		text = "{:.2f}%".format(confidence * 100)
