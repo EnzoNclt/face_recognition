@@ -6,18 +6,23 @@ This is a private repository for Smart City project in the State University of T
 * Create a virtual environment with python virtualenv by the following command:
     
 ```
-    virtualenv --python=/usr/bin/python3 venv
+virtualenv --python=/usr/bin/python3 venv
 ```
 * Activate the environment with:
  
 For Bash Users:
 ```
-    source venv/bin/activate
+source venv/bin/activate
 ```
 
 For Fish Users:
  ```
-    source venv/bin/activate.fish
+ source venv/bin/activate.fish
+ ```
+
+ Next, install the following packages:
+ ```
+ pip install opencv-python numpy imutils
  ```
 
 ## Usage
@@ -40,5 +45,5 @@ python gad.py --image path_to_image
 ## Collaborators
 * Julien Aldon
 * Julie Wurtz
-* Valetin Collomb
+* Valentin Collomb
 * Enzo Nicoletti
